@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>I'm ok</h1>
+    <script src="./socket.io.js"></script>
+    <script>
+      var URL_SERVER = 'https://localhost:443';
+      var socket = io.connect(URL_SERVER, {secure: true, transports: ['websocket']});
+
+      socket.on('message', function(data) {
+        alert(data);
+      });
+    </script>
+  </body>
+</html>
